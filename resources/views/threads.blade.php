@@ -22,7 +22,7 @@
                         Lorem ipsum dolor sit
                     </div>
                     <div class="pl-7 pt-2 pr-6 text-sm text-gray-900 dark:text-gray-400">
-                        Subtile Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est id eligendi quo ut in reiciendis obcaecati a, omnis nihil, qui et at? Repudiandae natus deleniti, perferendis enim vero neque incidunt?
+                        Subtile Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est id eligendi quo ut in reiciendis obcaecati a, omnis nihil, qui et at? Repudiandae natus deleniti, perferendis enim vero neque incidunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias et, amet enim quos iste maxime dignissimos neque illum eligendi incidunt?
                     </div>
                     <div class="thread-edit-delete-btn-group flex gap-2 m-6 justify-end">
                         <div>
