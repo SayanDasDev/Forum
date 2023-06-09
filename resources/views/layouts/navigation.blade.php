@@ -76,7 +76,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('threads')" :active="request()->routeIs('threads')">
-                {{ __('threads') }}
+                {{ __('Threads') }}
             </x-responsive-nav-link>
         </div>
 
