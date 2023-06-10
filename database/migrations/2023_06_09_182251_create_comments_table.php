@@ -15,8 +15,8 @@ return new class extends Migration
             
             $table->id();
             $table->string("content");
-            $table->integer("thread_id");
-            $table->integer("user_id");
+            $table->integer("thread_id"); //forein key
+            $table->integer("user_id");  //forein key
             $table->timestamps();
         });
     }
