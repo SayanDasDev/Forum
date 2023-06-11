@@ -4,16 +4,19 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Comment;
+use App\Models\Thread;
 
 class BestComment extends Component
 {
-    public $commentId, $comment;
+    public $commentId, $comment, $thread;
+    // public $a;
 
     protected $listeners = ['bestCommentMarked' => '$refresh'];
     
-    public function mount($commentId)
+    public function mount($commentId, Thread $threadId)
     {
         $this->commentId = $commentId;
+        $this->thread = $threadId;
         $this->comment = Comment::find($commentId);
     }
 

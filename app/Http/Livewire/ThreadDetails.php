@@ -25,6 +25,7 @@ class ThreadDetails extends Component
 
         return view('livewire.thread-details',[
             'bestComment' => $bestComment,
+            'thread' => $this->thread,
         ]);
     }
 

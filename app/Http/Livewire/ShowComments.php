@@ -11,6 +11,7 @@ class ShowComments extends Component
 {
 
     public $thread;
+    // public $a;
 
     protected $listeners = ['commentAdded' => '$refresh'];
 
@@ -32,6 +33,8 @@ class ShowComments extends Component
         $this->thread->comments()->update(['is_best' => false]);
         
         $comment = Comment::findOrFail($commentId);
+        // $this->a = $commentId;
+
 
         $comment->is_best = true;
         $comment->save();

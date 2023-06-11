@@ -17,6 +17,9 @@
                     @endif
                 </div>
             </div>
+            {{-- @php
+                print $a;
+            @endphp --}}
         @endif
     @endforeach
 </div>

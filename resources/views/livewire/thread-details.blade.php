@@ -19,7 +19,7 @@
                 
                 <livewire:add-comments :threadId="$thread->id" />
                 @if ($bestComment)
-                    <livewire:best-comment :commentId="$bestComment->id" />
+                    <livewire:best-comment :commentId="$bestComment->id" :threadId="$thread->id" />
                 @endif
                 <livewire:show-comments :threadId="$thread->id" />
 
