@@ -21,4 +21,10 @@ class BestComment extends Component
     {
         return view('livewire.best-comment');
     }
+
+    public function unmarkBest()
+    {
+        $this->comment->update(['is_best' => false]);
+        $this->emitUp('unmarkedBestComment');
+    }
 }

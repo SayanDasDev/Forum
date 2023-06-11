@@ -3,8 +3,9 @@
         @if(!$comment->is_best)
             <div class="max-w-7xl my-4 mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white flex justify-between dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="pl-6 pr-6 pt-4 text-sm text-gray-900 dark:text-gray-400">
-                        <span class="font-bold">{{ $comment->user->name }}:</span> {{ $comment->content }}
+                    <div class="pl-6 pr-6 pt-4 text-sm text-gray-900 dark:text-gray-400" style="width: calc(100% - 120px)">
+                        <span class="font-bold">{{ $comment->user->name }}:</span> 
+                        <p>{{ $comment->content }}</p>
                     </div>
                     @if($thread->user_id == Auth::id())
                         <form>
