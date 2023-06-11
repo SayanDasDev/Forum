@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class Threads extends Component
 {
     public $th, $thread_id, $thread_title, $thread_subtitle, $thread_content;
+
     public $threadShowing=true;
     public $threadCreating=false;
     public $threadEditing=false;
@@ -28,6 +29,7 @@ class Threads extends Component
         $this->thread_subtitle = '';
         $this->thread_content = '';
     }
+
 
     public function enterNewThreadMode()
     {

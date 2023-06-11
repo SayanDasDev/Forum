@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Livewire\ThreadDetails;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +30,8 @@ Route::get('/dashboard', function () {
 Route::get('/threads', function () {
     return view('threads');
 })->middleware(['auth', 'verified'])->name('threads');
+
+Route::get('/threads/{thread}', ThreadDetails::class)->name('threads.details');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
