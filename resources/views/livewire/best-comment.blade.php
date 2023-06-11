@@ -3,8 +3,8 @@
         <div class="bg-white flex justify-between dark:bg-gray-900 overflow-hidden shadow-sm sm:rounded-lg relative">
             <div class="px-6 py-4 font-bold text-lg text-gray-900 dark:text-gray-300" style="width: calc(100% - 72px)">
                 <div class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-br dark:bg-green-900 dark:text-green-300 absolute top-0 left-0">Best Comment</div>
-                <div class="pt-4">
-                    <span>{{ $comment->user->name }}:</span> {{ $comment->content }}
+                <div class="pt-4 font-normal text-base">
+                    <span class="font-extrabold text-lg mr-2">{{ $comment->user->name }}:</span> {{ $comment->content }}
                 </div>
             </div>
             @if($thread->user_id == Auth::id())
