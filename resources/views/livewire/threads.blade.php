@@ -18,11 +18,12 @@
 
     
         
-    @if($threadShowing)
-
-        @include('livewire.threadsShown')
-    @else
+    @if($threadCreating)
         @include('livewire.threadNew')
+    @elseif($threadEditing)
+        @include('livewire.threadEdit')
+    @else
+        @include('livewire.threadsShown')
     @endif
         
     
