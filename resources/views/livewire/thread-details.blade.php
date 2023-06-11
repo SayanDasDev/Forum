@@ -9,11 +9,11 @@
                             {{ $thread->thread_title }}
                         </h2>
                     </header>
-                    <div class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                    <div class="text-lg font-medium text-gray-700 px-3 dark:text-gray-300">
                         <p>{{ $thread->thread_subtitle }}</p>
                     </div>
                     <div>
-                        <p class="text-gray-800 dark:text-gray-200">{{ $thread->thread_content }}</p>
+                        <p class="text-gray-800 dark:text-gray-200 px-6 mt-6 text-justify">{!! nl2br(e($thread->thread_content)) !!}</p></p>
                     </div>
                 </div>
                 
