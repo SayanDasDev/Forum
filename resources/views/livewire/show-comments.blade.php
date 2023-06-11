@@ -1,4 +1,4 @@
-<div>
+<div class="my-6">
     @foreach($comments as $comment)
         @if(!$comment->is_best)
             <div class="max-w-7xl my-4 mx-auto sm:px-6 lg:px-8">
