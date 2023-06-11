@@ -100,4 +100,9 @@ class Threads extends Component
         $this->threadCreating=false;
         $this->threadEditing=false;
     }
+
+    public function destroy($id)
+    {
+        Thread::find($id)->delete();
+    }
 }
