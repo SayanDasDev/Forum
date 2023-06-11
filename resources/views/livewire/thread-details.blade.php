@@ -5,11 +5,11 @@
                 <div class="p-8">
                     <p class="text-sm text-gray-700 dark:text-gray-400">{{ $thread->user->name }}</p>
                     <header>
-                        <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100">
                             {{ $thread->thread_title }}
                         </h2>
                     </header>
-                    <div class="text-lg font-medium text-gray-700 px-3 dark:text-gray-300">
+                    <div class="text-lg font-medium text-gray-800 dark:text-gray-400 pt-2" style="width: 80%">
                         <p>{{ $thread->thread_subtitle }}</p>
                     </div>
                     <div>
