@@ -107,4 +107,5 @@ class Threads extends Component
     {
         Thread::find($id)->delete();
     }
+
 }

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Livewire;
-
-use Livewire\Component;
 use App\Models\Comment;
 use Illuminate\Support\Facades\Auth;
 
-class Comments extends Component
+use Livewire\Component;
+
+class AddComments extends Component
 {
     public $threadId, $comment;
 
@@ -21,7 +21,7 @@ class Comments extends Component
 
     public function render()
     {
-        return view('livewire.comments');
+        return view('livewire.add-comments');
     }
 
     public function addComment()
@@ -38,6 +38,6 @@ class Comments extends Component
 
         $this->comment = '';
 
+        $this->emit('commentAdded');
     }
-
 }
