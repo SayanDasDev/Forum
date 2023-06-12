@@ -26,19 +26,26 @@ class AddComments extends Component
 
     public function addComment()
     {
-        $this->validate();
+        try {
+            
+            $this->validate();
 
-        $userId = Auth::id();
+            $userId = Auth::id();
 
-        Comment::create([
-            'thread_id' => $this->threadId,
-            'user_id' => $userId,
-            'content' => $this->comment,
-        ]);
+            Comment::create([
+                'thread_id' => $this->threadId,
+                'user_id' => $userId,
+                'content' => $this->comment,
+            ]);
 
-        $this->comment = '';
+            $this->comment = '';
 
-        session()->flash('message', 'Comment added successfully.');
-        $this->emit('commentAdded');
+            session()->flash('message', 'Comment added successfully.');
+            $this->emit('commentAdded');
+
+        } catch (\Exception $e) {
+            session()->flash('error', 'Failed to create expense. '.$e->getMessage());
+        }
+        
     }
 }
