@@ -14,6 +14,10 @@ class Threads extends Component
     public $threadShowing=true;
     public $threadCreating=false;
     public $threadEditing=false;
+
+    protected $listeners = [
+        'destroy'
+    ];
     
     public function render()
     {

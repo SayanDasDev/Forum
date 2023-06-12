@@ -15,7 +15,7 @@
                                 Heading
                             </label>
                             <input class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block mx-2 w-full" id="thread_title" name="thread_title" wire:model="thread_title" type="text">
-                            {{-- <x-input-error :messages="$errors->addThreadTitle->get('ThreadTitle')" class="mt-2" /> --}}
+                            
                         </div>
 
                         <div>
@@ -23,14 +23,14 @@
                                 Sub Heading <span class="text-gray-600">(Optional)</span>
                             </label>
                             <input class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block mx-2 w-full" id="thread_subtitle" name="thread_subtitle" wire:model="thread_subtitle" type="text">
-                            {{-- <x-input-error :messages="$errors->addThreadSubTitle->get('ThreadSubTitle')" class="mt-2" /> --}}
+                            
                         </div>
 
                         <div>
                             
                             <label for="thread_content" class="block font-medium text-sm text-gray-700 dark:text-gray-300 px-2">Content</label>
                             <textarea id="thread_content" rows="8" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block mx-2 w-full" placeholder="Your Content Here..." wire:model="thread_content"></textarea>
-                            {{-- <x-input-error :messages="$errors->addThreadContent->get('ThreadContent')" class="mt-2" /> --}}
+                            
 
                         </div>
 

@@ -22,7 +22,9 @@
                         </button>
                     </div>
                     <div>
-                        <button type="button" class="delete-svg-outer text-red-700 border border-red-700 hover:bg-red-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:focus:ring-red-800 dark:hover:bg-red-500" wire:click.prevent="destroy({{ $thread->id }})">
+                        <button x-data="{ confirmDelete: false }"
+                            x-on:click="confirmDelete = confirm('Are you sure you want to delete this thread?'); if (confirmDelete) { window.livewire.emit('destroy', {{ $thread->id }}) }" type="button" class="delete-svg-outer text-red-700 border border-red-700 hover:bg-red-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:focus:ring-red-800 dark:hover:bg-red-500">
+                            
                             <svg class="w-4 h-4" viewBox="0 0 1024 1024"><g><path class="delete-svg-path fill-current dark:hover:text-white" d="M352 192V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64H96a32 32 0 0 1 0-64h256zm64 0h192v-64H416v64zM192 960a32 32 0 0 1-32-32V256h704v672a32 32 0 0 1-32 32H192zm224-192a32 32 0 0 0 32-32V416a32 32 0 0 0-64 0v320a32 32 0 0 0 32 32zm192 0a32 32 0 0 0 32-32V416a32 32 0 0 0-64 0v320a32 32 0 0 0 32 32z"></path></g></svg>
                         </button>
                     </div>

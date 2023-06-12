@@ -38,6 +38,7 @@ class AddComments extends Component
 
         $this->comment = '';
 
+        session()->flash('message', 'Comment added successfully.');
         $this->emit('commentAdded');
     }
 }
