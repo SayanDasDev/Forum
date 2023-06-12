@@ -18,6 +18,8 @@ class BestComment extends Component
         $this->commentId = $commentId;
         $this->thread = $threadId;
         $this->comment = Comment::find($commentId);
+
+        // dd($commentId);
     }
 
     public function render()
@@ -27,7 +29,9 @@ class BestComment extends Component
 
     public function unmarkBest()
     {
-        $this->comment->update(['is_best' => false]);
+        $this->comment->is_best = false;
+        $this->comment->save();
         $this->emitUp('unmarkedBestComment');
+        return redirect()->route('threads.details', $this->thread->id);
     }
 }

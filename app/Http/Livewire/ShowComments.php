@@ -38,8 +38,9 @@ class ShowComments extends Component
 
         $comment->is_best = true;
         $comment->save();
+        // $this->render();
         
-        // $this->emitUp('bestCommentMarked');
+        $this->emitUp('bestCommentMarked');
         return redirect()->route('threads.details', $this->thread->id);
     }
 }

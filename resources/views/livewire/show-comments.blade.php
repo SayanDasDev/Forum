@@ -9,18 +9,14 @@
                     </div>
                     @if($thread->user_id == Auth::id())
                         <form>
-                            <label for="markAsBest" class="mr-1 markAsBest cursor-pointer select-none items-center">
-                                <button wire:click.prevent="markAsBest({{ $comment->id }})" type="submit" name="markAsBest" id="markAsBest" class="sr-only"> </button>
+                            <label for="markAsBest{{$comment->id}}" class="mr-1 markAsBest cursor-pointer select-none items-center">
                                 <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mr-2">Mark as Best</span>
-                                {{-- <span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Mark as Best</span> --}}
+                                <button wire:click.prevent="markAsBest({{ $comment->id }})" type="submit" name="markAsBest{{$comment->id}}" id="markAsBest{{$comment->id}}" class="sr-only"> </button>
                             </label>
                         </form>
                     @endif
                 </div>
             </div>
-            {{-- @php
-                print $a;
-            @endphp --}}
         @endif
     @endforeach
 </div>

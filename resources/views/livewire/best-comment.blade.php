@@ -8,7 +8,7 @@
                 </div>
             </div>
             @if($thread->user_id == Auth::id())
-                <div class="my-auto cursor-pointer" wire:click="unmarkBest()">
+                <div class="my-auto cursor-pointer" wire:click.prevent="unmarkBest">
                     <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded-bl rounded-tl dark:bg-red-900 dark:text-red-300 h-6 pb-1">Unmark</span>
                 </div>
             @endif
